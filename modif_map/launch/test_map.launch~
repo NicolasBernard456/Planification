@@ -1,0 +1,5 @@
+<launch>
+	
+	<node name = "map_loader" pkg = "map_server" type = "map_server" args = "/home/nico/map/damien.yaml" output ="screen"/>
+
+</launch>

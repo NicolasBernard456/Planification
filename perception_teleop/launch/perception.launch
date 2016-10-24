@@ -1,0 +1,13 @@
+<launch>
+
+<!-- Manette	 -->
+	<node name="joy_node" pkg="joy" type="joy_node" output="screen"/> <!--Lancement du noeud de controle manette-->
+	<node name="teleop" pkg = "perception_teleop" type = "teleop" output = "screen"/>
+
+<!--Capteurs robots -->
+	<include file="$(find minilab_simulation)/launch/sim/minilab_state_publisher.launch"/>
+	
+<!-- Map -->
+	<node name="gmapping" pkg = "gmapping" type = "slam_gmapping" output = "screen"/>
+	
+</launch>
